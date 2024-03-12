@@ -1,0 +1,71 @@
+<section class = "center">
+    <article>
+        <h1>Contact</h1>
+        <h2>Phone</h2>
+        <a href="tel:+15079615576">(507) - 961 - 5576</a>
+        <h2>Email</h2>
+        <a href="mailto:clairegoeldner@gmail.com">ClaireGoeldner&#64;gmail.com</a>
+        <h2>Address</h2>
+        <address>W2007 Windsong Terrace Alma, WI 54610</address>
+    </article>
+    <br /><br /><a href="#top" class="toTop">To Top</a>
+
+    <div class="form" id="contactForm">
+        <fieldset id="comments">
+            <legend>Comments</legend>
+            <p class="radioLabel">Please rate my qualifications based on this website:</p>
+            <div class="radioContainer">
+                <input id="me1" name="rateMe" type="radio" [value]="1" [(ngModel)]="rateMe" />
+                <label for="me1">1</label>
+                <input id="me2" name="rateMe" type="radio" [value]="2" [(ngModel)]="rateMe" />
+                <label for="me2">2</label>
+                <input id="me3" name="rateMe" type="radio" [value]="3" [(ngModel)]="rateMe" />
+                <label for="me3">3</label>
+                <input id="me4" name="rateMe" type="radio" [value]="4" [(ngModel)]="rateMe" />
+                <label for="me4">4</label>
+                <input id="me5" name="rateMe" type="radio" [value]="5" [(ngModel)]="rateMe" />
+                <label for="me5">5</label>
+            </div>
+            
+            <br /><p class="radioLabel">Please rate your experience with this website:</p>
+            <div class="radioContainer">
+                <input id="site1" name="rateSite" type="radio" [value]="1" [(ngModel)]="rateSite" />
+                <label for="site1">1</label>
+                <input id="site2" name="rateSite" type="radio" [value]="2" [(ngModel)]="rateSite" />
+                <label for="site2">2</label>
+                <input id="site3" name="rateSite" type="radio" [value]="3" [(ngModel)]="rateSite" />
+                <label for="site3">3</label>
+                <input id="site4" name="rateSite" type="radio" [value]="4" [(ngModel)]="rateSite" />
+                <label for="site4">4</label>
+                <input id="site5" name="rateSite" type="radio" [value]="5" [(ngModel)]="rateSite" />
+                <label for="site5">5</label>
+            </div>
+
+            <br /><br /><label for="commentBox">Comments:</label>
+            <textarea id="commentBox" name="commentBox" placeholder="Other comments you wish to share with me" [(ngModel)]="comments"></textarea>
+        </fieldset>
+        <fieldset id="businessInfo">
+            <legend>Business Information</legend>
+            <label for="company">Company: *</label>
+            <input id="company" name="company" type="text" [(ngModel)]="company" />
+            <label for="fName">First Name: *</label>
+            <input id="fName" name="fName" type="text" [(ngModel)]="fName" />
+            <label for="lName">Last Name: *</label>
+            <input id="lName" name="lName" type="text" [(ngModel)]="lName" />
+
+            <label for="city">City: *</label>
+            <input default="Alma" id="city" name="city" type="text" [(ngModel)]="city" />
+            <label for="state">State: *</label>
+            <input default="WI" id="state" name="state" type="text" [(ngModel)]="state" />
+            <label for="zip">Zip Code: *</label>
+            <input id="zip" max="99999" min="10000" name="zip" placeholder="12345" type="number" [(ngModel)]="zip" />
+
+            <label for="phone">Phone Number:</label>
+            <input id="phone" name="phone" placeholder="(123) 456-7890" [(ngModel)]="phone" />
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" type="email" [(ngModel)]="email" />
+        </fieldset>
+        <input id="submitForm" type="submit" value="Submit" (click)="Submit()" />
+    </div><br />
+    <div>{{ results }}</div>
+</section>

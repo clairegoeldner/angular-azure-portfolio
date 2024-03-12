@@ -1,0 +1,43 @@
+<div class="show">
+  <header id="top">
+    <button class="a" (click)="Navigate('home')" title="My Portfolio Page"><h1>Claire Goeldner</h1></button>
+    <nav class = "horizontalNavigation">
+      <ul>
+        <li><button class="a" (click)="Navigate('home')" title="My Portfolio Page">Home</button></li>
+        <li><button class="a" (click)="Navigate('resume')" title="My Resume">Resume</button></li>
+        <li><button class="a" (click)="Navigate('projects')" title="My Projects">Projects</button></li>
+        <li><button class="a" (click)="Navigate('contact')" title="Contact Me">Contact</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="flex">
+    <app-home *ngIf="page=='home'"></app-home>
+    <app-resume *ngIf="page=='resume'"></app-resume>
+    <app-projects *ngIf="page=='projects'"></app-projects>
+    <app-contact *ngIf="page=='contact'"></app-contact>
+    <aside>
+      <h2>Learn More About Me:</h2>
+      <nav class="verticalNavigation">
+        <ul>
+          <li><button class="a" (click)="Navigate('resume')" title="My Resume">Resume</button></li>
+          <li><button class="a" (click)="Navigate('projects')" title="My Projects">Projects</button></li>
+          <li><a href="https://linkedin.com/in/claire-goeldner" title="LinkedIn">LinkedIn</a></li>
+        </ul>
+      </nav>
+      <h2>Be Part of My Future</h2>
+      <nav class="verticalNavigation">
+        <ul>
+          <li><button class="a" (click)="Navigate('contact')" title="Contact Me">Contact</button></li>
+        </ul>
+      </nav>
+      <p class="asideText">I am a driven young woman with a wide variety of interests. These include finance, programming, dance, art, and religion.</p>
+    </aside>
+  </div>
+  
+  <footer>
+    <a href="mailto:clairegoeldner@gmail.com">ClaireGoeldner&#64;gmail.com</a>
+    <a href="tel:+15079615576">(507) - 961 - 5576</a>
+    <address>W2007 Windsong Terrace Alma, WI 54610</address>
+  </footer>
+</div>
