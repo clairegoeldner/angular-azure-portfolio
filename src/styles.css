@@ -1,5 +1,13 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap');
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("./assets/montserrat.ttf");
+}
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('./assets/montserrat_alt.ttf');
+}
 
 /*
 Main CSS syle rules for Claire's portfolio site
@@ -14,7 +22,7 @@ body {
     text-align: center;
 }
 
-body > app-root > div {
+body > div {
     display: none;
 }
 
@@ -23,7 +31,7 @@ body div.show {
     box-shadow: -25px 0 50px rgba(0, 0, 0, 0.25),
                 25px 0 50px rgba(0, 0, 0, 0.25);
     display: block;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     max-width: 960px;
     min-height: 720px;
@@ -35,23 +43,27 @@ section > * {
     margin: 0 auto;
 }
 
-p, a, .a, li {
+p, a, li {
     text-align: left;
     width: auto;
 }
 
-a, .a {
+a {
     font-family: 'Montserrat Alternates';
 }
 
 /* Navigation Styles */
-header > :is(a, .a) {
-    background-color: rgb(206, 0, 186);
-    border: none;
+header > a {
     color: rgb(16, 24, 32);
     text-align: center;
     text-decoration: none;
     width: 100%;
+}
+
+header > a > h1 {
+    background-color: rgb(206, 0, 186);
+    margin: 0 auto;
+    padding: 0.5em
 }
 
 nav.horizontalNavigation {
@@ -85,20 +97,17 @@ header > nav.horizontalNavigation > ul > li:last-of-type {
     border-bottom-right-radius: 5px;
 }
 
-header > nav.horizontalNavigation > ul > li > :is(a:link, a:visited, .a) {
-    background-color: transparent;
-    border: none;
+header > nav.horizontalNavigation > ul > li > a:link, header > nav.horizontalNavigation > ul > li > a:visited {
     color:rgb(249, 249, 249);
     font-size: 1.25em;
     font-weight: bold;
     height: 100%;
-    margin: 0 auto;
     padding: 0.25em;
-    text-align: center;
     text-decoration: none;
+    width: 100%;
 }
 
-header > nav.horizontalNavigation > ul > li > :is(a:hover, a:active, .a:hover, .a:active) {
+header > nav.horizontalNavigation > ul > li > a:hover, header > nav.horizontalNavigation > ul > li > a:active {
     background-color: rgb(249, 249, 249);
     border-radius: 2.5px;
     color:rgb(20, 0, 255);
@@ -134,18 +143,17 @@ div.me > h2 {
 }
 
 /* In-Page Navigation */
-section.center > article > nav.verticalNavigation > ul > li > :is(a:link, a:visited, .a) {
+section.center > article > nav.verticalNavigation > ul > li > a:link, section.center > article > nav.verticalNavigation > ul > li > a:visited {
     color: rgb(206, 0, 186);
 }
 
-section.center > article > nav.verticalNavigation > ul > li > :is(a:hover, a:active, .a:hover, .a:active) {
+section.center > article > nav.verticalNavigation > ul > li > a:hover, section.center > article > nav.verticalNavigation > ul > li > a:active {
     color: rgb(20, 0, 255);
 }
 
 /* Article Styles */
 section {
     max-width: 720px;
-    min-height: 75vh;
 }
 
 article {
@@ -155,16 +163,19 @@ article {
 
 article h1 {
     font-size: 1.5em;
+    font-weight: 500;
     margin-top: 2.5em;
 }
 
 article section h3 {
     font-size: 1.17em;
+    font-weight: 500;
     margin-top: 1em;
 }
 
 article h2 {
     font-size: 1.25em;
+    font-weight: 500;
     margin-top: 2em;
 }
 
@@ -172,7 +183,7 @@ section ul {
     list-style: square;
 }
 
-.toTop:link, .toTop:visited, button.button {
+a.toTop:link, a.toTop:visited, button.button {
     background-color: rgb(206, 0, 186);
     border: none;
     border-radius: 2.5px;
@@ -182,7 +193,7 @@ section ul {
     text-decoration: none;
 }
 
-.toTop:hover, .toTop:active, button.button:hover {
+a.toTop:hover, a.toTop:active, button.button:hover {
     background-color: rgba(20, 0, 255, 0.5);
     color: rgb(249, 249, 249);
     text-decoration: none;
@@ -219,9 +230,8 @@ aside > nav.verticalNavigation > ul > li {
     width: 100%;
 }
 
-aside > nav.verticalNavigation :is(a:link, a:visited, .a) {
+aside > nav.verticalNavigation a:link, aside > nav.verticalNavigation a:visited {
     background-color: rgb(206, 0, 186);
-    border: none;
     border-radius: 2.5px;
     color: rgb(16, 24, 32);
     font-size: 1.25em;
@@ -230,9 +240,8 @@ aside > nav.verticalNavigation :is(a:link, a:visited, .a) {
     text-decoration: none;
 }
 
-aside > nav.verticalNavigation :is(a:hover, a:active, .a:hover, .a:active) {
+aside > nav.verticalNavigation a:hover, aside > nav.verticalNavigation a:active {
     background-color: rgb(249, 249, 249);
-    border: none;
     color: rgb(20, 0, 255);
 }
 
@@ -351,7 +360,7 @@ table.homeTable caption {
 }
 
 /* Forms Styles */
-.form#contactForm {
+form#contactForm {
     background-color: rgba(206, 0, 186, 0.05);
     border-radius: 25px;;
     display: flex;
@@ -361,7 +370,7 @@ table.homeTable caption {
     width: 80%;
 }
 
-.form#contactForm fieldset {
+form#contactForm fieldset {
     border: 1px solid rgb(16, 24, 32);
     border-radius: 25px;
     flex: 1 1 0px;
@@ -371,17 +380,17 @@ table.homeTable caption {
     width: 50%;
 }
 
-.form#contactForm fieldset legend {
+form#contactForm fieldset legend {
     padding: 0.25em;
 }
 
-.form#contactForm > input {
+form#contactForm > input {
     flex: 0 2 200px;
     margin: 10px auto;
     padding: 5px;
 }
 
-.form#contactForm input, .form#contactForm textarea {
+form#contactForm input, form#contactForm textarea {
     background-color: rgb(249, 249, 249);
     border: 1px solid rgb(16, 24, 32);
     border-radius: 5px;
@@ -389,30 +398,30 @@ table.homeTable caption {
     padding: 0.25em;
 }
 
-.form#contactForm input:hover, .form#contactForm textarea:hover, .form#contactForm input:focus, .form#contactForm textarea:focus {
+form#contactForm input:hover, form#contactForm textarea:hover, form#contactForm input:focus, form#contactForm textarea:focus {
     background-color: rgba(206, 0, 186, 0.1);
 }
 
-.form#contactForm div.radioContainer {
+form#contactForm div.radioContainer {
     display: flex;
     flex-flow: row wrap;
     margin: 0 auto;
     width: 175px;
 }
 
-.form#contactForm div.radioContainer input {
+form#contactForm div.radioContainer input {
     flex: 0 0 35px;
     margin: 0 auto 5px;
     order: 0;
 }
 
-.form#contactForm div.radioContainer label {
+form#contactForm div.radioContainer label {
     flex: 0 0 35px;
     margin: 0 auto;
     order: 1;
 }
 
-.form#contactForm textarea {
+form#contactForm textarea {
     height: 15em;
     margin: 10px auto;
     width: 90%;
