@@ -53,14 +53,16 @@ a {
 }
 
 /* Navigation Styles */
-header > a {
+header > .a {
+    border: none;
     color: rgb(16, 24, 32);
+    padding: 0;
     text-align: center;
     text-decoration: none;
     width: 100%;
 }
 
-header > a > h1 {
+header > .a > h1 {
     background-color: rgb(206, 0, 186);
     margin: 0 auto;
     padding: 0.5em
@@ -97,17 +99,20 @@ header > nav.horizontalNavigation > ul > li:last-of-type {
     border-bottom-right-radius: 5px;
 }
 
-header > nav.horizontalNavigation > ul > li > a:link, header > nav.horizontalNavigation > ul > li > a:visited {
+header > nav.horizontalNavigation > ul > li > :is(.a, a:link, a:visited) {
+    background: none;
+    border: none;
     color:rgb(249, 249, 249);
     font-size: 1.25em;
     font-weight: bold;
     height: 100%;
     padding: 0.25em;
     text-decoration: none;
+    transition: ease-in-out 0.25s;
     width: 100%;
 }
 
-header > nav.horizontalNavigation > ul > li > a:hover, header > nav.horizontalNavigation > ul > li > a:active {
+header > nav.horizontalNavigation > ul > li > :is(.a:hover, a:hover, a:active) {
     background-color: rgb(249, 249, 249);
     border-radius: 2.5px;
     color:rgb(20, 0, 255);
@@ -143,11 +148,11 @@ div.me > h2 {
 }
 
 /* In-Page Navigation */
-section.center > article > nav.verticalNavigation > ul > li > a:link, section.center > article > nav.verticalNavigation > ul > li > a:visited {
+section.center > article > nav.verticalNavigation > ul > li > :is(.a, a:link, a:visited) {
     color: rgb(206, 0, 186);
 }
 
-section.center > article > nav.verticalNavigation > ul > li > a:hover, section.center > article > nav.verticalNavigation > ul > li > a:active {
+section.center > article > nav.verticalNavigation > ul > li > :is(.a:hover, a:hover, a:active) {
     color: rgb(20, 0, 255);
 }
 
@@ -230,17 +235,18 @@ aside > nav.verticalNavigation > ul > li {
     width: 100%;
 }
 
-aside > nav.verticalNavigation a:link, aside > nav.verticalNavigation a:visited {
+aside > nav.verticalNavigation :is(.a, a:link, a:visited) {
     background-color: rgb(206, 0, 186);
+    border: none;
     border-radius: 2.5px;
     color: rgb(16, 24, 32);
     font-size: 1.25em;
-    font-weight: bold;
+    font-weight: 500;
     padding: 0.5em;
     text-decoration: none;
 }
 
-aside > nav.verticalNavigation a:hover, aside > nav.verticalNavigation a:active {
+aside > nav.verticalNavigation :is(.a:hover, .a:active, a:hover, a:active) {
     background-color: rgb(249, 249, 249);
     color: rgb(20, 0, 255);
 }

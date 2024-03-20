@@ -1,31 +1,34 @@
 <div class="show">
   <header id="top">
-      <a href="index"><h1>Claire Goeldner</h1></a>
+      <button class="a" (click)="navigate('home')"><h1>Claire Goeldner</h1></button>
       <nav class = "horizontalNavigation">
           <ul>
-              <li><a href="/" title="My Portfolio Page">Home</a></li>
-              <li><a href="resume" title="My Resume">Resume</a></li>
-              <li><a href="projects" title="My Projects">Projects</a></li>
-              <li><a href="contact" title="Contact Me">Contact</a></li>
+              <li><button class="a" (click)="navigate('home')" title="My Portfolio Page">Home</button></li>
+              <li><button class="a" (click)="navigate('resume')" title="My Resume">Resume</button></li>
+              <li><button class="a" (click)="navigate('projects')"  title="My Projects">Projects</button></li>
+              <li><button class="a" (click)="navigate('contact')" title="Contact Me">Contact</button></li>
           </ul>
       </nav>
   </header>
 
   <div class="flex">
-    <router-outlet />
+    <app-home *ngIf="page == 'home'"></app-home>
+    <app-resume *ngIf="page == 'resume'"></app-resume>
+    <app-projects *ngIf="page == 'projects'"></app-projects>
+    <app-contact *ngIf="page == 'contact'"></app-contact>
     <aside>
       <h2>Learn More About Me:</h2>
       <nav class="verticalNavigation">
         <ul>
-          <li><a href="resume" title="My Resume">Resume</a></li>
-          <li><a href="projects" title="My Projects">Projects</a></li>
+          <li><button class="a" (click)="navigate('resume')"  title="My Resume">Resume</button></li>
+          <li><button class="a" (click)="navigate('projects')" title="My Projects">Projects</button></li>
           <li><a href="https://linkedin.com/in/claire-goeldner" title="LinkedIn">LinkedIn</a></li>
         </ul>
       </nav>
       <h2>Be Part of My Future</h2>
       <nav class="verticalNavigation">
         <ul>
-          <li><a href="contact" title="Contact Me">Contact</a></li>
+          <li><button class="a" (click)="navigate('contact')" title="Contact Me">Contact</button></li>
         </ul>
       </nav>
       <p class="asideText">I am a driven young woman with a wide variety of interests. These include finance, programming, dance, art, and religion.</p>
