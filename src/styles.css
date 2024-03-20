@@ -366,7 +366,7 @@ table.homeTable caption {
 }
 
 /* Forms Styles */
-form#contactForm {
+#contactForm {
     background-color: rgba(206, 0, 186, 0.05);
     border-radius: 25px;;
     display: flex;
@@ -376,7 +376,7 @@ form#contactForm {
     width: 80%;
 }
 
-form#contactForm fieldset {
+#contactForm fieldset {
     border: 1px solid rgb(16, 24, 32);
     border-radius: 25px;
     flex: 1 1 0px;
@@ -386,17 +386,17 @@ form#contactForm fieldset {
     width: 50%;
 }
 
-form#contactForm fieldset legend {
+#contactForm fieldset legend {
     padding: 0.25em;
 }
 
-form#contactForm > input {
+#contactForm > input {
     flex: 0 2 200px;
     margin: 10px auto;
     padding: 5px;
 }
 
-form#contactForm input, form#contactForm textarea {
+#contactForm input, #contactForm textarea {
     background-color: rgb(249, 249, 249);
     border: 1px solid rgb(16, 24, 32);
     border-radius: 5px;
@@ -404,30 +404,30 @@ form#contactForm input, form#contactForm textarea {
     padding: 0.25em;
 }
 
-form#contactForm input:hover, form#contactForm textarea:hover, form#contactForm input:focus, form#contactForm textarea:focus {
+#contactForm input:hover, #contactForm textarea:hover, #contactForm input:focus, #contactForm textarea:focus {
     background-color: rgba(206, 0, 186, 0.1);
 }
 
-form#contactForm div.radioContainer {
+#contactForm div.radioContainer {
     display: flex;
     flex-flow: row wrap;
     margin: 0 auto;
     width: 175px;
 }
 
-form#contactForm div.radioContainer input {
+#contactForm div.radioContainer input {
     flex: 0 0 35px;
     margin: 0 auto 5px;
     order: 0;
 }
 
-form#contactForm div.radioContainer label {
+#contactForm div.radioContainer label {
     flex: 0 0 35px;
     margin: 0 auto;
     order: 1;
 }
 
-form#contactForm textarea {
+#contactForm textarea {
     height: 15em;
     margin: 10px auto;
     width: 90%;
