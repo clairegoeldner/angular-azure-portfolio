@@ -9,7 +9,8 @@ export const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "resume", component: ResumeComponent },
     { path: "projects", component: ProjectsComponent },
-    { path: "contact", component: ContactComponent }
+    { path: "contact", component: ContactComponent },
+    { path: "**", component: HomeComponent }
 ];
 
 @NgModule({
