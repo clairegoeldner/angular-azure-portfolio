@@ -63,7 +63,7 @@ header > .a {
 }
 
 header > .a > h1 {
-    background-color: rgb(206, 0, 186);
+    background-color: rgb(63, 81, 181);
     margin: 0 auto;
     padding: 0.5em
 }
@@ -82,8 +82,7 @@ header > nav.horizontalNavigation > ul {
 }
 
 header > nav.horizontalNavigation > ul > li {
-    background-color: rgba(20, 0, 255, 0.5);
-    display: table-column;
+    background-color: rgba(255, 64, 129);
     float: left;
     margin-top: 0;
     padding: 0.5em 0;
@@ -97,25 +96,6 @@ header > nav.horizontalNavigation > ul > li:first-of-type {
 
 header > nav.horizontalNavigation > ul > li:last-of-type {
     border-bottom-right-radius: 5px;
-}
-
-header > nav.horizontalNavigation > ul > li > :is(.a, a:link, a:visited) {
-    background: none;
-    border: none;
-    color:rgb(249, 249, 249);
-    font-size: 1.25em;
-    font-weight: bold;
-    height: 100%;
-    padding: 0.25em;
-    text-decoration: none;
-    transition: ease-in-out 0.25s;
-    width: 100%;
-}
-
-header > nav.horizontalNavigation > ul > li > :is(.a:hover, a:hover, a:active) {
-    background-color: rgb(249, 249, 249);
-    border-radius: 2.5px;
-    color:rgb(20, 0, 255);
 }
 
 /* Home Page Picture Styles */
@@ -145,15 +125,6 @@ div.me > h2 {
     padding: 0.5em;
     text-align: center;
     width: auto;
-}
-
-/* In-Page Navigation */
-section.center > article > nav.verticalNavigation > ul > li > :is(.a, a:link, a:visited) {
-    color: rgb(206, 0, 186);
-}
-
-section.center > article > nav.verticalNavigation > ul > li > :is(.a:hover, a:hover, a:active) {
-    color: rgb(20, 0, 255);
 }
 
 /* Article Styles */
@@ -188,25 +159,9 @@ section ul {
     list-style: square;
 }
 
-a.toTop:link, a.toTop:visited, button.button {
-    background-color: rgb(206, 0, 186);
-    border: none;
-    border-radius: 2.5px;
-    color: rgb(16, 24, 32);
-    font-weight: bold;
-    padding: 0.75em 1.25em;
-    text-decoration: none;
-}
-
-a.toTop:hover, a.toTop:active, button.button:hover {
-    background-color: rgba(20, 0, 255, 0.5);
-    color: rgb(249, 249, 249);
-    text-decoration: none;
-}
-
 /* Side Bar Styles */
 aside {
-    background-color: rgba(20, 0, 255, 0.5);
+    background-color: rgb(63, 81, 181);
     border-radius: 24px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     height: auto;
@@ -235,22 +190,6 @@ aside > nav.verticalNavigation > ul > li {
     width: 100%;
 }
 
-aside > nav.verticalNavigation :is(.a, a:link, a:visited) {
-    background-color: rgb(206, 0, 186);
-    border: none;
-    border-radius: 2.5px;
-    color: rgb(16, 24, 32);
-    font-size: 1.25em;
-    font-weight: 500;
-    padding: 0.5em;
-    text-decoration: none;
-}
-
-aside > nav.verticalNavigation :is(.a:hover, .a:active, a:hover, a:active) {
-    background-color: rgb(249, 249, 249);
-    color: rgb(20, 0, 255);
-}
-
 aside p {
     color: rgb(249, 249, 249);
     font-family: 'Montserrat Alternates';
@@ -261,8 +200,8 @@ aside p {
 
 /* Footer Styles */
 footer {
-    background-color: rgba(20, 0, 255, 0.5);
-    border: 2px solid rgb(206, 0, 186);
+    background-color: rgb(63, 81, 181);
+    border: 2px solid rgba(255, 64, 129);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color:rgb(249, 249, 249);
@@ -310,7 +249,7 @@ table.homeTable td, table.homeTable th {
 }
 
 table.homeTable th {
-    background-color: rgb(206, 0, 186);
+    background-color: rgba(255, 64, 129);
     color: rgb(249, 249, 249);
     font-weight: normal;
 }
@@ -321,7 +260,7 @@ table.homeTable thead th {
 }
 
 table.homeTable thead td {
-    background-color: rgba(206, 0, 186, 0.5);
+    background-color: rgba(255, 64, 129, 0.5);
 }
 
 table.homeTable col.subjects * {
@@ -334,7 +273,7 @@ table.homeTable col.past {
 }
 
 table.homeTable col.grades {
-    background-color: rgba(20, 0, 255, 0.05);
+    background-color: rgba(63, 81, 181, 0.2);
     width: 34px;
 }
 
@@ -343,19 +282,19 @@ table.homeTable col.current, table.homeTable col.future {
 }
 
 table.homeTable col.current {
-    background-color: rgba(206, 0, 186, 0.1);
+    background-color: rgba(255, 64, 129, 0.1);
 }
 
 table.homeTable col.future {
-    background-color: rgba(20, 0, 255, 0.05);
+    background-color: rgba(63, 81, 181, 0.2);
 }
 
 table.homeTable tbody.rva td:not(table.homeTable tbody.rva th) {
-    background-color: rgba(206, 0, 186, 0.1);
+    background-color: rgba(255, 64, 129, 0.2);
 }
 
 table.homeTable tbody.ntc td:not(table.homeTable tbody.ntc th) {
-    background-color: rgba(20, 0, 255, 0.1);
+    background-color: rgba(63, 81, 181, 0.25);
 }
 
 table.homeTable caption {
@@ -363,108 +302,4 @@ table.homeTable caption {
     font-size: 0.75em;
     font-style: italic;
     padding: 1em;
-}
-
-/* Forms Styles */
-#contactForm {
-    background-color: rgba(206, 0, 186, 0.05);
-    border-radius: 25px;;
-    display: flex;
-    flex-flow: row wrap;
-    margin: 50px auto 25px;
-    padding: 10px;
-    width: 80%;
-}
-
-#contactForm fieldset {
-    border: 1px solid rgb(16, 24, 32);
-    border-radius: 25px;
-    flex: 1 1 0px;
-    margin: 10px;
-    padding: 10px 25px 25px;
-    text-align: center;
-    width: 50%;
-}
-
-#contactForm fieldset legend {
-    padding: 0.25em;
-}
-
-#contactForm > input {
-    flex: 0 2 200px;
-    margin: 10px auto;
-    padding: 5px;
-}
-
-#contactForm input, #contactForm textarea {
-    background-color: rgb(249, 249, 249);
-    border: 1px solid rgb(16, 24, 32);
-    border-radius: 5px;
-    margin: 10px auto;
-    padding: 0.25em;
-}
-
-#contactForm input:hover, #contactForm textarea:hover, #contactForm input:focus, #contactForm textarea:focus {
-    background-color: rgba(206, 0, 186, 0.1);
-}
-
-#contactForm div.radioContainer {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0 auto;
-    width: 175px;
-}
-
-#contactForm div.radioContainer input {
-    flex: 0 0 35px;
-    margin: 0 auto 5px;
-    order: 0;
-}
-
-#contactForm div.radioContainer label {
-    flex: 0 0 35px;
-    margin: 0 auto;
-    order: 1;
-}
-
-#contactForm textarea {
-    height: 15em;
-    margin: 10px auto;
-    width: 90%;
-}
-
-div#results {
-    white-space: pre-line;
-}
-
-/* Projects Styles */
-section.projects {
-    text-align: left;
-    width: 100%;
-}
-
-section.projects h2, section.projects h3 {
-    text-align: center;
-    margin: 1.5em;
-}
-
-section.projects img {
-    display: inline;
-    float: left;
-    margin: 1em;
-    width: 60%;
-}
-
-section.projects img.vertical {
-    width: 30%;
-}
-
-section.projects p {
-    display: inline;
-    float: none;
-    font-size: 1.2em;
-    margin: 10px;
-    padding: 1em;
-    text-align: left;
-    width: 35%;
 }

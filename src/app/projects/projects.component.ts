@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
+// Material imports
+import { MatButtonModule } from "@angular/material/button";
+
 import { ApiResponse } from '../../assets/apiResponse';
 import { Project } from '../../assets/project';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, MatButtonModule, HttpClientModule],
   templateUrl: './projects.component.html'
 })
 export class ProjectsComponent implements OnInit {

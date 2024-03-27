@@ -3,10 +3,10 @@
       <button class="a" (click)="navigate('home')"><h1>Claire Goeldner</h1></button>
       <nav class = "horizontalNavigation">
           <ul>
-              <li><button class="a" (click)="navigate('home')" title="My Portfolio Page">Home</button></li>
-              <li><button class="a" (click)="navigate('resume')" title="My Resume">Resume</button></li>
-              <li><button class="a" (click)="navigate('projects')"  title="My Projects">Projects</button></li>
-              <li><button class="a" (click)="navigate('contact')" title="Contact Me">Contact</button></li>
+              <li><button mat-raised-button color="primary" (click)="navigate('home')" title="My Portfolio Page">Home</button></li>
+              <li><button mat-raised-button color="primary" (click)="navigate('resume')" title="My Resume">Resume</button></li>
+              <li><button mat-raised-button color="primary" (click)="navigate('projects')"  title="My Projects">Projects</button></li>
+              <li><button mat-raised-button color="primary" (click)="navigate('contact')" title="Contact Me">Contact</button></li>
           </ul>
       </nav>
   </header>
@@ -20,15 +20,15 @@
       <h2>Learn More About Me:</h2>
       <nav class="verticalNavigation">
         <ul>
-          <li><button class="a" (click)="navigate('resume')"  title="My Resume">Resume</button></li>
-          <li><button class="a" (click)="navigate('projects')" title="My Projects">Projects</button></li>
-          <li><a href="https://linkedin.com/in/claire-goeldner" title="LinkedIn">LinkedIn</a></li>
+          <li><button mat-raised-button color="accent" (click)="navigate('resume')"  title="My Resume">Resume</button></li>
+          <li><button mat-raised-button color="accent" (click)="navigate('projects')" title="My Projects">Projects</button></li>
+          <li><a mat-raised-button color="accent" href="https://linkedin.com/in/claire-goeldner" title="LinkedIn">LinkedIn</a></li>
         </ul>
       </nav>
       <h2>Be Part of My Future</h2>
       <nav class="verticalNavigation">
         <ul>
-          <li><button class="a" (click)="navigate('contact')" title="Contact Me">Contact</button></li>
+          <li><button mat-raised-button color="accent" (click)="navigate('contact')" title="Contact Me">Contact</button></li>
         </ul>
       </nav>
       <p class="asideText">I am a driven young woman with a wide variety of interests. These include finance, programming, dance, art, and religion.</p>
